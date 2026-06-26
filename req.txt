@@ -1,0 +1,19 @@
+Proposta
+    Crie uma página de portfólio pessoal utilizando HTML, CSS e JavaScript. O portfólio deve apresentar quem
+    você é, suas habilidades e pelo menos um projeto ou trabalho que já realizou.
+    Requisitos
+
+HTML: arquivo index.html com marcação semântica:
+    Seção de apresentação pessoal.
+    Seção com lista de habilidades ou interesses (mínimo 5 itens).
+    Seção com ao menos um projeto ou trabalho, com descrição e link externo.
+    Formulário de contato com campo de nome, campo de e-mail e botão de envio.
+
+CSS: arquivo style.css externo:
+    Identidade visual consistente: cores e tipografia coerentes em toda a página.
+    Feedback visual em elementos interativos (hover, foco ou transição).
+
+JavaScript: arquivo script.js externo:
+    No mínimo uma função nomeada criada pelo aluno, disparada por um evento do usuário.
+    Ao enviar o formulário, exibir uma mensagem de confirmação na própria página com o nome
+    digitado, não usar alert().

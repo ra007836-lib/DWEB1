@@ -1,0 +1,332 @@
+:root {
+    --corFundo: #1F2E29;
+    --corDestaque: #D4A359;
+    --corTextoPrincipal: #FFFFFF;
+    --corTextoSecundario: #C0C0C0;
+    --corFundoSecundario: #2A3B34;
+    --corLinhasDecorativas: #D4A359;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--corFundo);
+    color: var(--corTextoPrincipal);
+    line-height: 1.6;
+}
+
+
+.cabecalhoPrincipal {
+    background-color: rgba(31, 46, 41, 0.95);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--corDestaque);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navegacaoFixa {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logoPortifolio {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--corTextoPrincipal);
+    letter-spacing: 2px;
+}
+
+.menuNavegacao {
+    display: flex;
+    gap: 2rem;
+}
+
+.linkNavegacao {
+    color: var(--corTextoPrincipal);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.linkNavegacao:hover {
+    color: var(--corDestaque);
+}
+
+
+.conteudoPrincipal {
+    padding: 2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.secaoSobreMim,
+.secaoHabilidades,
+.secaoProjetos,
+.secaoContato {
+    padding: 4rem 0;
+    border-bottom: 1px dashed rgba(212, 163, 89, 0.3);
+}
+
+.tituloSecao {
+    font-size: 2.5rem;
+    color: var(--corTextoPrincipal);
+    margin-bottom: 2rem;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.tituloSecao::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 60%;
+    height: 4px;
+    background-color: var(--corDestaque);
+}
+
+
+.secaoSobreMim {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.espacoFotoPerfil {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.molduraFoto {
+    width: 300px;
+    height: 300px;
+    background-color: var(--corFundoSecundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--corDestaque);
+    overflow: hidden;
+    position: relative;
+}
+
+.fotoPerfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.textoApresentacao {
+    flex: 2;
+    min-width: 300px;
+}
+
+.tituloApresentacao {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.destaqueTexto {
+    color: var(--corDestaque);
+}
+
+.subtituloApresentacao {
+    font-size: 1.5rem;
+    color: var(--corTextoSecundario);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.paragrafoApresentacao {
+    font-size: 1.1rem;
+    color: var(--corTextoSecundario);
+    max-width: 600px;
+}
+
+
+.listaHabilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.itemHabilidade {
+    background-color: var(--corFundoSecundario);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--corDestaque);
+    border-left: 4px solid var(--corDestaque);
+    cursor: default;
+}
+
+
+.containerProjetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cartaoProjeto {
+    background-color: var(--corFundoSecundario);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cartaoProjeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tituloProjeto {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--corDestaque);
+}
+
+.descricaoProjeto {
+    color: var(--corTextoSecundario);
+    margin-bottom: 2rem;
+}
+
+.linkProjeto {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    color: var(--corTextoPrincipal);
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid var(--corDestaque);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.linkProjeto:hover {
+    background-color: var(--corDestaque);
+    color: var(--corFundo);
+}
+
+
+.secaoContato {
+    text-align: center;
+}
+
+.textoContato {
+    color: var(--corTextoSecundario);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.formularioContato {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--corFundoSecundario);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.grupoFormulario {
+    margin-bottom: 1.5rem;
+}
+
+.rotuloFormulario {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--corDestaque);
+}
+
+.campoFormulario {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--corFundo);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--corTextoPrincipal);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campoFormulario:focus {
+    outline: none;
+    border-color: var(--corDestaque);
+    box-shadow: 0 0 8px rgba(212, 163, 89, 0.4);
+}
+
+.botaoEnviar {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--corDestaque);
+    color: var(--corTextoSecundario);
+    border: none;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botaoEnviar:active {
+    transform: scale(0.98);
+}
+
+.mensagemConfirmacao {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: 700;
+    display: none;
+}
+
+.mensagemConfirmacao.sucesso {
+    display: block;
+    background-color: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+
+.rodapePrincipal {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a2521;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.textoRodape {
+    color: var(--corTextoSecundario);
+    font-size: 0.9rem;
+}
