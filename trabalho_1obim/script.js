@@ -16,3 +16,9 @@ function processarEnvioFormulario(evento) {
         mensagemConfirmacao.textContent = '';
     }, 5000);
 }
+
+// Pergunta obrigatória:
+// Aponte a linha em que você captura o valor digitado no campo de nome e explique:
+// de onde vem esse valor?
+// Como o JavaScript sabe o que o usuário digitou?
+// O que aconteceria se o campo estivesse vazio?
